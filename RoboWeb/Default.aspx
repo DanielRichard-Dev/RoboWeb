@@ -1,41 +1,182 @@
 ﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="RoboWeb._Default" %>
 
-<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-    <div class="jumbotron">
-        <h1>ASP.NET</h1>
-        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
-        <p><a href="http://www.asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+<asp:Content ID="bodyRobo" ContentPlaceHolderID="MainContent" runat="server">
+
+    <div class="row col-md-12">
+        <div class="row">
+            <h1>Braços</h1>
+        </div>
+
+        <div class="col-md-6">
+            <div>
+                <h1>Braço Esquerdo</h1>
+                <div class="jumbotron">
+                    <div>
+                        <h3>- Cotovelo</h3>
+                    </div>
+
+                    <div class="checkbox form-check form-check-inline">
+                        <asp:CheckBox ID="checkECotoveloEmRepouso" runat="server" AutoPostBack="true" OnCheckedChanged="checkECotoveloEmRepouso_CheckedChanged" Text="Em Repouso" TextAlign="Right" />
+                    </div>
+
+                    <div class="checkbox form-check form-check-inline">
+                        <asp:CheckBox ID="checkELevementeContraido" runat="server" AutoPostBack="true" OnCheckedChanged="checkELevementeContraido_CheckedChanged" Text="Levemente Contraído" TextAlign="Right" />
+                    </div>
+
+                    <div class="checkbox form-check form-check-inline">
+                        <asp:CheckBox ID="checkEContraido" runat="server" AutoPostBack="true" OnCheckedChanged="checkEContraido_CheckedChanged" Text="Contraído" TextAlign="Right" />
+                    </div>
+
+                    <div class="checkbox form-check form-check-inline">
+                        <asp:CheckBox ID="checkEFortementeContraido" runat="server" AutoPostBack="true" OnCheckedChanged="checkEFortementeContraido_CheckedChanged" Text="Fortemente Contraído" TextAlign="Right" />
+                    </div>
+
+                    <div>
+                        <h3>- Pulso</h3>
+                    </div>
+
+                    <div class="checkbox form-check form-check-inline">
+                        <asp:CheckBox ID="checkEPulsoRotacaoMenosNoventa" runat="server" AutoPostBack="true" OnCheckedChanged="checkEPulsoRotacaoMenosNoventa_CheckedChanged" Text="Rotação para -90°" TextAlign="Right" />
+                    </div>
+
+                    <div class="checkbox form-check form-check-inline">
+                        <asp:CheckBox ID="checkEPulsoRotacaoMenosQuarentaCinco" runat="server" AutoPostBack="true" OnCheckedChanged="checkEPulsoRotacaoMenosQuarentaCinco_CheckedChanged" Text="Rotação para -45°" TextAlign="Right" />
+                    </div>
+
+                    <div class="checkbox form-check form-check-inline">
+                        <asp:CheckBox ID="checkEPulsoRepouso" runat="server" AutoPostBack="true" OnCheckedChanged="checkEPulsoRepouso_CheckedChanged" Text="Em Repouso" TextAlign="Right" />
+                    </div>
+
+                    <div class="checkbox form-check form-check-inline">
+                        <asp:CheckBox ID="checkEPulsoRotacaoQuarentaCinco" runat="server" AutoPostBack="true" OnCheckedChanged="checkEPulsoRotacaoQuarentaCinco_CheckedChanged" Text="Rotação para 45°" TextAlign="Right" />
+                    </div>
+
+                    <div class="checkbox form-check form-check-inline">
+                        <asp:CheckBox ID="checkEPulsoRotacaoNoventa" runat="server" AutoPostBack="true" OnCheckedChanged="checkEPulsoRotacaoNoventa_CheckedChanged" Text="Rotação para 90°" TextAlign="Right" />
+                    </div>
+
+                    <div class="checkbox form-check form-check-inline">
+                        <asp:CheckBox ID="checkEPulsoRotacaoCemTrintaCinco" runat="server" AutoPostBack="true" OnCheckedChanged="checkEPulsoRotacaoCemTrintaCinco_CheckedChanged" Text="Rotação para 135°" TextAlign="Right" />
+                    </div>
+
+                    <div class="checkbox form-check form-check-inline">
+                        <asp:CheckBox ID="checkEPulsoRotacaoCemOitenta" runat="server" AutoPostBack="true" OnCheckedChanged="checkEPulsoRotacaoCemOitenta_CheckedChanged" Text="Rotação para 180°" TextAlign="Right" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div>
+                <h1>Braço Direito</h1>
+                <div class="jumbotron">
+                    <div>
+                        <h3>- Cotovelo</h3>
+                    </div>
+
+                    <div class="checkbox form-check form-check-inline">
+                        <asp:CheckBox ID="checkDCotoveloEmRepouso" runat="server" AutoPostBack="true" OnCheckedChanged="checkDCotoveloEmRepouso_CheckedChanged" Text="Em Repouso" TextAlign="Right" />
+                    </div>
+
+                    <div class="checkbox form-check form-check-inline">
+                        <asp:CheckBox ID="checkDLevementeContraido" runat="server" AutoPostBack="true" OnCheckedChanged="checkDLevementeContraido_CheckedChanged" Text="Levemente Contraído" TextAlign="Right" />
+                    </div>
+
+                    <div class="checkbox form-check form-check-inline">
+                        <asp:CheckBox ID="checkDContraido" runat="server" AutoPostBack="true" OnCheckedChanged="checkDContraido_CheckedChanged" Text="Contraído" TextAlign="Right" />
+                    </div>
+
+                    <div class="checkbox form-check form-check-inline">
+                        <asp:CheckBox ID="checkDFortementeContraido" runat="server" AutoPostBack="true" OnCheckedChanged="checkDFortementeContraido_CheckedChanged" Text="Fortemente Contraído" TextAlign="Right" />
+                    </div>
+
+                    <div>
+                        <h3>- Pulso</h3>
+                    </div>
+
+                    <div class="checkbox form-check form-check-inline">
+                        <asp:CheckBox ID="checkDPulsoRotacaoMenosNoventa" runat="server" AutoPostBack="true" OnCheckedChanged="checkDPulsoRotacaoMenosNoventa_CheckedChanged" Text="Rotação para -90°" TextAlign="Right" />
+                    </div>
+
+                    <div class="checkbox form-check form-check-inline">
+                        <asp:CheckBox ID="checkDPulsoRotacaoMenosQuarentaCinco" runat="server" AutoPostBack="true" OnCheckedChanged="checkDPulsoRotacaoMenosQuarentaCinco_CheckedChanged" Text="Rotação para -45°" TextAlign="Right" />
+                    </div>
+
+                    <div class="checkbox form-check form-check-inline">
+                        <asp:CheckBox ID="checkDPulsoRepouso" runat="server" AutoPostBack="true" OnCheckedChanged="checkDPulsoRepouso_CheckedChanged" Text="Em Repouso" TextAlign="Right" />
+                    </div>
+
+                    <div class="checkbox form-check form-check-inline">
+                        <asp:CheckBox ID="checkDPulsoRotacaoQuarentaCinco" runat="server" AutoPostBack="true" OnCheckedChanged="checkDPulsoRotacaoQuarentaCinco_CheckedChanged" Text="Rotação para 45°" TextAlign="Right" />
+                    </div>
+
+                    <div class="checkbox form-check form-check-inline">
+                        <asp:CheckBox ID="checkDPulsoRotacaoNoventa" runat="server" AutoPostBack="true" OnCheckedChanged="checkDPulsoRotacaoNoventa_CheckedChanged" Text="Rotação para 90°" TextAlign="Right" />
+                    </div>
+
+                    <div class="checkbox form-check form-check-inline">
+                        <asp:CheckBox ID="checkDPulsoRotacaoCemTrintaCinco" runat="server" AutoPostBack="true" OnCheckedChanged="checkDPulsoRotacaoCemTrintaCinco_CheckedChanged" Text="Rotação para 135°" TextAlign="Right" />
+                    </div>
+
+                    <div class="checkbox form-check form-check-inline">
+                        <asp:CheckBox ID="checkDPulsoRotacaoCemOitenta" runat="server" AutoPostBack="true" OnCheckedChanged="checkDPulsoRotacaoCemOitenta_CheckedChanged" Text="Rotação para 180°" TextAlign="Right" />
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div class="row">
-        <div class="col-md-4">
-            <h2>Getting started</h2>
-            <p>
-                ASP.NET Web Forms lets you build dynamic websites using a familiar drag-and-drop, event-driven model.
-            A design surface and hundreds of controls and components let you rapidly build sophisticated, powerful UI-driven sites with data access.
-            </p>
-            <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301948">Learn more &raquo;</a>
-            </p>
+
+    <div class="row col-md-12">
+        <div class="row d-flex justify-content-center">
+            <h1>Cabeça</h1>
         </div>
-        <div class="col-md-4">
-            <h2>Get more libraries</h2>
-            <p>
-                NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.
-            </p>
-            <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301949">Learn more &raquo;</a>
-            </p>
+
+        <div class="col-md-6">
+            <div>
+                <h1>Rotação</h1>
+                <div class="jumbotron">
+                    <div class="checkbox form-check form-check-inline">
+                        <asp:CheckBox ID="checkCabecaRotacaoMenosNoventa" runat="server" AutoPostBack="true" OnCheckedChanged="checkCabecaRotacaoMenosNoventa_CheckedChanged" Text="Rotação -90°" TextAlign="Right" />
+                    </div>
+
+                    <div class="checkbox form-check form-check-inline">
+                        <asp:CheckBox ID="checkCabecaRotacaoMenosQuarentaCinco" runat="server" AutoPostBack="true" OnCheckedChanged="checkCabecaRotacaoMenosQuarentaCinco_CheckedChanged" Text="Rotação -45°" TextAlign="Right" />
+                    </div>
+
+                    <div class="checkbox form-check form-check-inline">
+                        <asp:CheckBox ID="checkCabecaRepouso" runat="server" AutoPostBack="true" OnCheckedChanged="checkCabecaRepouso_CheckedChanged" Text="Em Repouso" TextAlign="Right" />
+                    </div>
+
+                    <div class="checkbox form-check form-check-inline">
+                        <asp:CheckBox ID="checkCabecaRotacaoQuarentaCinco" runat="server" AutoPostBack="true" OnCheckedChanged="checkCabecaRotacaoQuarentaCinco_CheckedChanged" Text="Rotação 45°" TextAlign="Right" />
+                    </div>
+
+                    <div class="checkbox form-check form-check-inline">
+                        <asp:CheckBox ID="checkCabecaRotacaoNoventa" runat="server" AutoPostBack="true" OnCheckedChanged="checkCabecaRotacaoNoventa_CheckedChanged" Text="Rotação 90°" TextAlign="Right" />
+                    </div>               
+                </div>
+            </div>
         </div>
-        <div class="col-md-4">
-            <h2>Web Hosting</h2>
-            <p>
-                You can easily find a web hosting company that offers the right mix of features and price for your applications.
-            </p>
-            <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301950">Learn more &raquo;</a>
-            </p>
+
+        <div class="col-md-6">
+            <div>
+                <h1>Inclinação</h1>
+                <div class="jumbotron">
+                    <div class="checkbox form-check form-check-inline">
+                        <asp:CheckBox ID="checkCabecaParaCima" runat="server" AutoPostBack="true" OnCheckedChanged="checkCabecaParaCima_CheckedChanged" Text="Para Cima" TextAlign="Right" />
+                    </div>
+
+                    <div class="checkbox form-check form-check-inline">
+                        <asp:CheckBox ID="checkInclinacaoCabecaRepouso" runat="server" AutoPostBack="true" OnCheckedChanged="checkInclinacaoCabecaRepouso_CheckedChanged" Text="Em Repouso" TextAlign="Right" />
+                    </div>
+
+                    <div class="checkbox form-check form-check-inline">
+                        <asp:CheckBox ID="checkCabecaParaBaixo" runat="server" AutoPostBack="true" OnCheckedChanged="checkCabecaParaBaixo_CheckedChanged" Text="Para Baixo" TextAlign="Right" />
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
