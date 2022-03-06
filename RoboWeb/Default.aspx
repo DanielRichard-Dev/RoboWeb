@@ -17,19 +17,19 @@
                     </div>
 
                     <div class="checkbox form-check form-check-inline">
-                        <asp:CheckBox ID="checkECotoveloEmRepouso" runat="server" AutoPostBack="true" OnCheckedChanged="checkECotoveloEmRepouso_CheckedChanged" Text="Em Repouso" TextAlign="Right" />
+                        <asp:CheckBox ID="checkECotoveloEmRepouso" runat="server" AutoPostBack="true" OnCheckedChanged="checkECotoveloCotoveloEmRepouso_CheckedChanged" Text="Em Repouso" TextAlign="Right" />
                     </div>
 
                     <div class="checkbox form-check form-check-inline">
-                        <asp:CheckBox ID="checkELevementeContraido" runat="server" AutoPostBack="true" OnCheckedChanged="checkELevementeContraido_CheckedChanged" Text="Levemente Contraído" TextAlign="Right" />
+                        <asp:CheckBox ID="checkECotoveloLevementeContraido" runat="server" AutoPostBack="true" OnCheckedChanged="checkECotoveloLevementeContraido_CheckedChanged" Text="Levemente Contraído" TextAlign="Right" />
                     </div>
 
                     <div class="checkbox form-check form-check-inline">
-                        <asp:CheckBox ID="checkEContraido" runat="server" AutoPostBack="true" OnCheckedChanged="checkEContraido_CheckedChanged" Text="Contraído" TextAlign="Right" />
+                        <asp:CheckBox ID="checkECotoveloContraido" runat="server" AutoPostBack="true" OnCheckedChanged="checkECotoveloContraido_CheckedChanged" Text="Contraído" TextAlign="Right" />
                     </div>
 
                     <div class="checkbox form-check form-check-inline">
-                        <asp:CheckBox ID="checkEFortementeContraido" runat="server" AutoPostBack="true" OnCheckedChanged="checkEFortementeContraido_CheckedChanged" Text="Fortemente Contraído" TextAlign="Right" />
+                        <asp:CheckBox ID="checkECotoveloFortementeContraido" runat="server" AutoPostBack="true" OnCheckedChanged="checkECotoveloFortementeContraido_CheckedChanged" Text="Fortemente Contraído" TextAlign="Right" />
                     </div>
 
                     <div>
@@ -80,15 +80,15 @@
                     </div>
 
                     <div class="checkbox form-check form-check-inline">
-                        <asp:CheckBox ID="checkDLevementeContraido" runat="server" AutoPostBack="true" OnCheckedChanged="checkDLevementeContraido_CheckedChanged" Text="Levemente Contraído" TextAlign="Right" />
+                        <asp:CheckBox ID="checkDCotoveloLevementeContraido" runat="server" AutoPostBack="true" OnCheckedChanged="checkDCotoveloLevementeContraido_CheckedChanged" Text="Levemente Contraído" TextAlign="Right" />
                     </div>
 
                     <div class="checkbox form-check form-check-inline">
-                        <asp:CheckBox ID="checkDContraido" runat="server" AutoPostBack="true" OnCheckedChanged="checkDContraido_CheckedChanged" Text="Contraído" TextAlign="Right" />
+                        <asp:CheckBox ID="checkDCotoveloContraido" runat="server" AutoPostBack="true" OnCheckedChanged="checkDCotoveloContraido_CheckedChanged" Text="Contraído" TextAlign="Right" />
                     </div>
 
                     <div class="checkbox form-check form-check-inline">
-                        <asp:CheckBox ID="checkDFortementeContraido" runat="server" AutoPostBack="true" OnCheckedChanged="checkDFortementeContraido_CheckedChanged" Text="Fortemente Contraído" TextAlign="Right" />
+                        <asp:CheckBox ID="checkDCotoveloFortementeContraido" runat="server" AutoPostBack="true" OnCheckedChanged="checkDCotoveloFortementeContraido_CheckedChanged" Text="Fortemente Contraído" TextAlign="Right" />
                     </div>
 
                     <div>

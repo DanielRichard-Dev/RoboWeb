@@ -22,31 +22,31 @@ namespace RoboWeb {
         protected global::System.Web.UI.WebControls.CheckBox checkECotoveloEmRepouso;
         
         /// <summary>
-        /// checkELevementeContraido control.
+        /// checkECotoveloLevementeContraido control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox checkELevementeContraido;
+        protected global::System.Web.UI.WebControls.CheckBox checkECotoveloLevementeContraido;
         
         /// <summary>
-        /// checkEContraido control.
+        /// checkECotoveloContraido control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox checkEContraido;
+        protected global::System.Web.UI.WebControls.CheckBox checkECotoveloContraido;
         
         /// <summary>
-        /// checkEFortementeContraido control.
+        /// checkECotoveloFortementeContraido control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox checkEFortementeContraido;
+        protected global::System.Web.UI.WebControls.CheckBox checkECotoveloFortementeContraido;
         
         /// <summary>
         /// checkEPulsoRotacaoMenosNoventa control.
@@ -121,31 +121,31 @@ namespace RoboWeb {
         protected global::System.Web.UI.WebControls.CheckBox checkDCotoveloEmRepouso;
         
         /// <summary>
-        /// checkDLevementeContraido control.
+        /// checkDCotoveloLevementeContraido control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox checkDLevementeContraido;
+        protected global::System.Web.UI.WebControls.CheckBox checkDCotoveloLevementeContraido;
         
         /// <summary>
-        /// checkDContraido control.
+        /// checkDCotoveloContraido control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox checkDContraido;
+        protected global::System.Web.UI.WebControls.CheckBox checkDCotoveloContraido;
         
         /// <summary>
-        /// checkDFortementeContraido control.
+        /// checkDCotoveloFortementeContraido control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox checkDFortementeContraido;
+        protected global::System.Web.UI.WebControls.CheckBox checkDCotoveloFortementeContraido;
         
         /// <summary>
         /// checkDPulsoRotacaoMenosNoventa control.
