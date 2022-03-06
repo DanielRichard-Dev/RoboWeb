@@ -1,4 +1,5 @@
 ﻿using RoboModels.Constants;
+using RoboModels.RoboModels;
 using RoboServices.RoboInterfaces;
 using RoboServices.RoboServices;
 using System;
@@ -21,7 +22,7 @@ namespace RoboWeb
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            _roboService.GetApiRobo(ServicoApiRoboConstant.IniciarRobo);
+            var robo = _roboService.GetApiRobo(ServicoApiRoboConstant.IniciarRobo);
         }
 
         protected void checkECotoveloEmRepouso_CheckedChanged(object sender, EventArgs e)
@@ -174,6 +175,11 @@ namespace RoboWeb
         }
 
         protected void checkCabecaParaBaixo_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void CarregarChecksRobo(RoboModel robo)
         {
 
         }

@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using RoboModels.RoboModels;
 using RoboServices.RoboInterfaces;
 using System;
 using System.Collections.Generic;
@@ -21,11 +22,13 @@ namespace RoboServices.RoboServices
 
         }
 
-        public void GetApiRobo(string servicoApiRobo)
+        public RoboModel GetApiRobo(string servicoApiRobo)
         {
             var responseRobo = roboClient.GetAsync(servicoApiRobo).Result;
             var stringDataRobo = responseRobo.Content.ReadAsStringAsync().Result;
-            var dataRobo = JsonConvert.DeserializeObject<object>(stringDataRobo);    
+            var robo = JsonConvert.DeserializeObject<RoboModel>(stringDataRobo);
+
+            return robo;
         }
     }
 }

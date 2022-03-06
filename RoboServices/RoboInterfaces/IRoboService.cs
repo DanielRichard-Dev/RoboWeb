@@ -1,7 +1,9 @@
-﻿namespace RoboServices.RoboInterfaces
+﻿using RoboModels.RoboModels;
+
+namespace RoboServices.RoboInterfaces
 {
     public interface IRoboService
     {
-        void GetApiRobo(string servicoApiRobo);
+        RoboModel GetApiRobo(string servicoApiRobo);
     }
 }

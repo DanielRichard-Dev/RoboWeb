@@ -52,6 +52,11 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\RoboModels\RoboModels.csproj">
+      <Project>{f957ee10-1bcc-4749-9f99-44cdb754d413}</Project>
+      <Name>RoboModels</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
