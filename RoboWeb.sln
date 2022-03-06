@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.757
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoboWeb", "RoboWeb\RoboWeb.csproj", "{57344ECB-44AD-48D7-8DE7-73D9DA2A7866}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoboServices", "RoboServices\RoboServices.csproj", "{25712011-32AF-4395-B25E-12BCB04D68B5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{57344ECB-44AD-48D7-8DE7-73D9DA2A7866}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{57344ECB-44AD-48D7-8DE7-73D9DA2A7866}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{57344ECB-44AD-48D7-8DE7-73D9DA2A7866}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25712011-32AF-4395-B25E-12BCB04D68B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25712011-32AF-4395-B25E-12BCB04D68B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25712011-32AF-4395-B25E-12BCB04D68B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25712011-32AF-4395-B25E-12BCB04D68B5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

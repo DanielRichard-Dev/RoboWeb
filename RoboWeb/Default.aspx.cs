@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RoboServices.RoboServices;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +12,8 @@ namespace RoboWeb
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            var t = new RoboServices.RoboServices.RoboService();
+            t.IniciarRobo();
         }
 
         protected void checkECotoveloEmRepouso_CheckedChanged(object sender, EventArgs e)
