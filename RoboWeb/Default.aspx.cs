@@ -1,4 +1,6 @@
-﻿using RoboServices.RoboServices;
+﻿using RoboModels.Constants;
+using RoboServices.RoboInterfaces;
+using RoboServices.RoboServices;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,10 +12,16 @@ namespace RoboWeb
 {
     public partial class _Default : Page
     {
+        private IRoboService _roboService { get; set; }
+
+        protected void Page_Init(object sender, EventArgs e)
+        {
+            _roboService = new RoboService();
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            var t = new RoboServices.RoboServices.RoboService();
-            t.IniciarRobo();
+            _roboService.GetApiRobo(ServicoApiRoboConstant.IniciarRobo);
         }
 
         protected void checkECotoveloEmRepouso_CheckedChanged(object sender, EventArgs e)

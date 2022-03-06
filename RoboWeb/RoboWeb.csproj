@@ -224,6 +224,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\RoboModels\RoboModels.csproj">
+      <Project>{f957ee10-1bcc-4749-9f99-44cdb754d413}</Project>
+      <Name>RoboModels</Name>
+    </ProjectReference>
     <ProjectReference Include="..\RoboServices\RoboServices.csproj">
       <Project>{25712011-32AF-4395-B25E-12BCB04D68B5}</Project>
       <Name>RoboServices</Name>
