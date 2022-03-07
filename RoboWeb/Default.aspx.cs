@@ -4,11 +4,7 @@ using RoboModels.RoboModels;
 using RoboServices.RoboInterfaces;
 using RoboServices.RoboServices;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace RoboWeb
 {
@@ -318,46 +314,104 @@ namespace RoboWeb
             CarregarChecksRobo(_robo.Robo);
         }
 
-        //
-
         protected void checkCabecaRotacaoMenosNoventa_CheckedChanged(object sender, EventArgs e)
         {
+            DesativarCheckRotacaoCabeca();
 
+            checkCabecaRotacaoMenosQuarentaCinco.Enabled = true;
+
+            _robo.RoboCodigoMovimentoCabeca = RoboCodigoMovimentoCabecaEnum.CabecaRotacaoMenosNoventa;
+
+            _robo = MovimentarCabecaRobo(_robo);
+            CarregarChecksRobo(_robo.Robo);
         }
 
         protected void checkCabecaRotacaoMenosQuarentaCinco_CheckedChanged(object sender, EventArgs e)
         {
+            DesativarCheckRotacaoCabeca();
 
+            checkCabecaRotacaoMenosNoventa.Enabled = true;
+            checkCabecaRepouso.Enabled = true;
+
+            _robo.RoboCodigoMovimentoCabeca = RoboCodigoMovimentoCabecaEnum.CabecaRotacaoMenosQuarentaCinco;
+
+            _robo = MovimentarCabecaRobo(_robo);
+            CarregarChecksRobo(_robo.Robo);
         }
 
         protected void checkCabecaRepouso_CheckedChanged(object sender, EventArgs e)
         {
+            DesativarCheckRotacaoCabeca();
 
+            checkCabecaRotacaoMenosQuarentaCinco.Enabled = true;
+            checkCabecaRotacaoQuarentaCinco.Enabled = true;
+
+            _robo.RoboCodigoMovimentoCabeca = RoboCodigoMovimentoCabecaEnum.CabecaRotacaoRepouso;
+
+            _robo = MovimentarCabecaRobo(_robo);
+            CarregarChecksRobo(_robo.Robo);
         }
 
         protected void checkCabecaRotacaoQuarentaCinco_CheckedChanged(object sender, EventArgs e)
         {
+            DesativarCheckRotacaoCabeca();
 
+            checkCabecaRepouso.Enabled = true;
+            checkCabecaRotacaoNoventa.Enabled = true;
+
+            _robo.RoboCodigoMovimentoCabeca = RoboCodigoMovimentoCabecaEnum.CabecaRotacaoQuarentaCinco;
+
+            _robo = MovimentarCabecaRobo(_robo);
+            CarregarChecksRobo(_robo.Robo);
         }
 
         protected void checkCabecaRotacaoNoventa_CheckedChanged(object sender, EventArgs e)
         {
+            DesativarCheckRotacaoCabeca();
 
+            checkCabecaRotacaoQuarentaCinco.Enabled = true;
+
+            _robo.RoboCodigoMovimentoCabeca = RoboCodigoMovimentoCabecaEnum.CabecaRotacaoNoventa;
+
+            _robo = MovimentarCabecaRobo(_robo);
+            CarregarChecksRobo(_robo.Robo);
         }
 
         protected void checkCabecaParaCima_CheckedChanged(object sender, EventArgs e)
         {
+            DesativarCheckInclinacaoCabeca();
 
+            checkInclinacaoCabecaRepouso.Enabled = true;
+
+            _robo.RoboCodigoMovimentoCabeca = RoboCodigoMovimentoCabecaEnum.CabecaInclinacaoCima;
+
+            _robo = MovimentarCabecaRobo(_robo);
+            CarregarChecksRobo(_robo.Robo);
         }
 
         protected void checkInclinacaoCabecaRepouso_CheckedChanged(object sender, EventArgs e)
         {
+            DesativarCheckInclinacaoCabeca();
 
+            checkCabecaParaCima.Enabled = true;
+            checkCabecaParaBaixo.Enabled = true;
+
+            _robo.RoboCodigoMovimentoCabeca = RoboCodigoMovimentoCabecaEnum.CabecaInclinacaoRepouso;
+
+            _robo = MovimentarCabecaRobo(_robo);
+            CarregarChecksRobo(_robo.Robo);
         }
 
         protected void checkCabecaParaBaixo_CheckedChanged(object sender, EventArgs e)
         {
+            DesativarCheckInclinacaoCabeca();
 
+            checkInclinacaoCabecaRepouso.Enabled = true;
+
+            _robo.RoboCodigoMovimentoCabeca = RoboCodigoMovimentoCabecaEnum.CabecaInclinacaoBaixo;
+
+            _robo = MovimentarCabecaRobo(_robo);
+            CarregarChecksRobo(_robo.Robo);
         }
 
         //Método para liberar primeiros movimentos do robô
@@ -471,16 +525,17 @@ namespace RoboWeb
             checkDPulsoRotacaoCemOitenta.Enabled = false;
         }
 
-        protected void DeixarChecksDisabilitado()
+        protected void DesativarCheckRotacaoCabeca()
         {
-            //Rotação da cabeça robô
             checkCabecaRotacaoMenosNoventa.Enabled = false;
             checkCabecaRotacaoMenosQuarentaCinco.Enabled = false;
             checkCabecaRepouso.Enabled = false;
             checkCabecaRotacaoQuarentaCinco.Enabled = false;
             checkCabecaRotacaoNoventa.Enabled = false;
+        }
 
-            //Inclinação da cabeça robô
+        protected void DesativarCheckInclinacaoCabeca()
+        {
             checkCabecaParaCima.Enabled = false;
             checkInclinacaoCabecaRepouso.Enabled = false;
             checkCabecaParaBaixo.Enabled = false;
@@ -556,6 +611,11 @@ namespace RoboWeb
             return _robo;
         }
 
+        protected RoboApiModel MovimentarCabecaRobo(RoboApiModel robo)
+        {
+            _robo = _roboService.PutApiRobo(ServicoApiRoboConstant.MovimentarCabecaRobo, _robo);
 
+            return _robo;
+        }
     }
 }

@@ -4,5 +4,6 @@
     {
         public const string IniciarRobo = "robo";
         public const string MovimentarBracoRobo = "robo/movimentarbraco";
+        public const string MovimentarCabecaRobo = "robo/movimentarcabeca";
     }
 }
