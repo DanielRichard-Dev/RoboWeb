@@ -2,8 +2,10 @@
 
 namespace RoboServices.RoboInterfaces
 {
-    public interface IRoboService
+    public interface IRoboService<T>
     {
-        RoboModel GetApiRobo(string servicoApiRobo);
+        RoboApiModel GetApiRobo(string servicoApiRobo);
+
+        RoboApiModel PutApiRobo(string servicoApiRobo, T put);
     }
 }

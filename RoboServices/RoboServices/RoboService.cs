@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace RoboServices.RoboServices
 {
-    public class RoboService : IRoboService
+    public class RoboService<T> : IRoboService<T>
     {
         HttpClient roboClient;
 
@@ -19,14 +19,24 @@ namespace RoboServices.RoboServices
         {
             if (roboClient == null)
                 roboClient = new HttpClient() { BaseAddress = new Uri($"{ConfigurationManager.AppSettings["urlRoboApi"]}") };
-
         }
 
-        public RoboModel GetApiRobo(string servicoApiRobo)
+        public RoboApiModel GetApiRobo(string servicoApiRobo)
         {
             var responseRobo = roboClient.GetAsync(servicoApiRobo).Result;
             var stringDataRobo = responseRobo.Content.ReadAsStringAsync().Result;
-            var robo = JsonConvert.DeserializeObject<RoboModel>(stringDataRobo);
+            var robo = JsonConvert.DeserializeObject<RoboApiModel>(stringDataRobo);
+
+            return robo;
+        }
+
+        public RoboApiModel PutApiRobo(string servicoApiRobo, T put)
+        {
+            var jsonRoboPut = JsonConvert.SerializeObject(put);
+            var contentRobo = new StringContent(jsonRoboPut.ToString(), Encoding.UTF8, "application/json");
+            var responseRobo = roboClient.PutAsync(servicoApiRobo, contentRobo).Result;
+            var stringDataRobo = responseRobo.Content.ReadAsStringAsync().Result;
+            var robo = JsonConvert.DeserializeObject<RoboApiModel>(stringDataRobo);
 
             return robo;
         }
